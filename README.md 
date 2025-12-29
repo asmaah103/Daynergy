@@ -1,0 +1,104 @@
+# Daynergy
+
+## Project Overview
+Daynergy is an Android productivity application designed to help users manage their daily tasks based on their **energy levels**.
+Instead of focusing only on time-based planning, Daynergy encourages users to organize tasks according to how much energy they have throughout the day, promoting better balance, focus, and productivity.
+
+The application allows users to:
+- Create and manage daily tasks
+- Assign energy levels (Low, Medium, High) to tasks
+- Organize tasks into task groups
+- View daily progress and task status
+- Receive motivational quotes
+- Use light and dark mode themes
+
+The app is built using modern Android development tools and follows a clean, scalable architecture.
+
+---
+
+## Architecture Choice
+Daynergy follows the **MVVM (Model–View–ViewModel)** architecture and is implemented using **Jetpack Compose** for UI development.
+
+### Architecture Breakdown
+
+#### Model
+- Handles data and business logic
+- Implemented using:
+  - **Repository layer** to abstract data sources
+  - **Remote data sources** for external data (e.g. quotes)
+  - **DataStore** for local data persistence
+
+#### View
+- Built using **Jetpack Compose**
+- Responsible for displaying UI and observing state from ViewModels
+- Located inside the `ui` package
+
+#### ViewModel
+- Acts as a bridge between the View and the Model
+- Manages UI state and business logic
+- Implemented ViewModels include:
+  - `TaskViewModel` – manages task data and operations
+  - `EnergyViewModel` – handles energy level logic
+  - `QuoteViewModel` – manages motivational quotes
+  - `ThemeViewModel` – controls light and dark mode
+- `TaskViewModelFactory` is used to create ViewModels with required dependencies
+
+### Why MVVM?
+- Clear separation of concerns
+- Lifecycle-aware state management
+- Improved maintainability and testability
+- Easy scalability for future features
+- Aligns with modern Android development best practices
+
+---
+
+## Project Structure
+com.project.daynergy
+│
+├── core
+│ ├── datastore
+│ ├── navigation
+│ ├── remote
+│ ├── repository
+│ └── viewmodel
+│
+├── ui
+│ ├── screens
+│ └── components
+│
+├── DaynergyApp.kt
+├── DaynergyApplication.kt
+└── MainActivity.kt
+
+
+---
+
+## Steps to Run the Project
+
+### Prerequisites
+- Android Studio (latest stable version)
+- JDK 17
+- Android SDK
+
+### Running the Application
+1. Open the project in **Android Studio**.
+2. Allow Gradle to sync and build the project.
+3. Start an Android emulator or connect a physical Android device.
+4. Click the **Run ▶️** button.
+5. The Daynergy application will launch on the device.
+
+---
+
+## GitHub Repository / Video Record
+- **GitHub Repository:** (provided with submission)
+- **Video Demo:** (provided with submission)
+
+---
+
+## Author
+- **Name:** Asma Alharbi
+- **Project Name:** Daynergy
+- **Platform:** Android
+- **Technologies:** Kotlin, Jetpack Compose, MVVM
+
+
