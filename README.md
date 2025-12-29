@@ -89,12 +89,6 @@ com.project.daynergy
 
 ---
 
-## GitHub Repository / Video Record
-- **GitHub Repository:** (provided with submission)
-- **Video Demo:** (provided with submission)
-
----
-
 ## Author
 - **Name:** Asma Alharbi
 - **Project Name:** Daynergy
